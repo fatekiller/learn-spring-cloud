@@ -1,0 +1,14 @@
+# 配置解释文档：https://blog.csdn.net/libai245/article/details/127818627
+# 只启动一个服务时，心跳数量过低告警解释：https://blog.csdn.net/fengzelun/article/details/117718784
+server:
+  port: 1001 # 端口名称，启动后访问 http://localhost:1001 能看到控制台
+eureka:
+  instance:
+    hostname: localhost # 服务器端实例名称，有多个节点的时候配置不同的
+  server:
+    renewalPercentThreshold: 0.6 # 心跳比例过低告警阈值
+  client:
+    registerWithEureka: false # 不向注册中心注册自己
+    fetchRegistry: false # false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #设置与Eureka Server交互的地址， 查询服务和注册服务都需要依赖这个地址。

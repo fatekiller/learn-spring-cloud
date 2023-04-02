@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @Value("${spring.application.name}")
+    //@Value("${spring.application.name}")
     private String appName;
 
     @RequestMapping(path = "/hello")

@@ -18,6 +18,7 @@
         <module>eureka-server</module>
         <module>service-provider</module>
         <module>service-consumer</module>
+        <module>netty-demo</module>
     </modules>
     <properties>
         <java.version>1.8</java.version>
@@ -32,6 +33,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
         </dependency>
 
         <dependency>

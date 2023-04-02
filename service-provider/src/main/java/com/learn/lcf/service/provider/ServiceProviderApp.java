@@ -2,10 +2,12 @@ package com.learn.lcf.service.provider;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.scheduling.annotation.EnableScheduling;
+//import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
-@EnableEurekaClient
+@EnableScheduling
+//@EnableEurekaClient
 public class ServiceProviderApp {
 
     public static void main(String[] args) {
